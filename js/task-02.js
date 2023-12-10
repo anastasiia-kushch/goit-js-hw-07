@@ -25,19 +25,18 @@ const images = [
   },
 ];
 
-const listElement = document.querySelector('.gallery')
+const listElement = document.querySelector('.gallery');
 const liArray = [];
 
 for (const image of images) {
+  const liElement = document.createElement('li');
+  const imageElement = document.createElement('img');
 
-    const liElement = document.createElement("li")
-    const imageElement = document.createElement("img");
+  imageElement.setAttribute('src', image.url);
+  imageElement.setAttribute('alt', image.alt);
 
-    imageElement.setAttribute("src", image.url)
-    imageElement.setAttribute("alt", image.alt)
-
-    liElement.appendChild(imageElement);
-    liArray.push(liElement);
+  liElement.appendChild(imageElement);
+  liArray.push(liElement);
 }
 
 listElement.append(...liArray);

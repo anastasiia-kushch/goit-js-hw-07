@@ -7,7 +7,6 @@ const createBoxes = () => {
   const divsArray = [];
 
   if (inputEl.value >= 1 && inputEl.value <= 100) {
-
     for (let i = 0; i < inputEl.value; i++) {
       const divEl = document.createElement('div');
       const size = 30 + i * 10;
@@ -23,10 +22,12 @@ const createBoxes = () => {
       parentDiv.appendChild(div);
     });
   }
+  inputEl.value = '';
 };
 
 const destroyBoxes = (event) => {
   parentDiv.innerHTML = '';
+  inputEl.value = '';
 };
 
 function getRandomHexColor() {
