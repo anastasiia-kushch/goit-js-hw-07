@@ -3,7 +3,7 @@ const buttonEl = bodyEl.querySelector('.change-color');
 const spanEl = bodyEl.querySelector('.color');
 
 const changingEvent = (event) => {
-  buttonEl.style.backgroundColor = getRandomHexColor();
+  bodyEl.style.backgroundColor = getRandomHexColor();
   spanEl.textContent = getRandomHexColor();
 };
 
