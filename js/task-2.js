@@ -26,12 +26,8 @@ const images = [
 ];
 
 const list = document.querySelector('.gallery');
+const markup = images
+  .map((image) => `<li><img src="${image.url}" alt="${image.alt}"></li>`)
+  .join('');
 
-for (const img of images) {
-  const item = document.createElement('li');
-  const image = document.createElement('img');
-  image.src = img.url;
-  image.alt = img.alt;
-  item.append(image);
-  list.append(item);
-}
+list.insertAdjacentHTML('beforeend', markup);
